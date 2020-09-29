@@ -1,0 +1,93 @@
+{% extends "mi/layoutc.html" %}
+
+{% block title %}
+    Test
+{% endblock %}
+
+{% block main %}
+
+<main class="containter p-5">
+
+<h2>MULTIPLE INTELLIGENCE TEST</h2>
+<p>PLEASE FILL OUT THIS QUESTIONNAIRE TO DETERMINE WHAT YOUR TOP INTELLIGENCES ARE.</p>
+<p>SELECT A NUMBER 1 THROUGH 5 FOR EACH QUESTION.</p>
+<ul class = "unstyled">
+    <li>1: THIS STATEMENT DOES NOT DESCRIBE ME AT ALL.</li>
+    <li>2: THIS STATEMENT DESCRIBES ME VERY LITTLE.</li>
+    <li>3: THIS STATEMENT DESCRIBES ME SOMEWHAT.</li>
+    <li>4: THIS STATEMENT DESCRIBES ME PRETTY WELL.</li>
+    <li>5: THIS STATEMENT DESCRIBES ME EXACTLY.</li>
+</ul>
+<p>IF YOU'RE TAKING THIS TEST AS A STUDENT, PLEASE ENTER YOUR NAME AND THE UNIQUE CODE YOUR TEACHER GAVE YOU.</p>
+<form action="{% url 'test' %}" method="POST">
+  {% csrf_token %}
+      <div class="form-group">
+            <input autocomplete="off" autofocus required class="form-control" name="name" placeholder="Name" type="text">
+        </div>
+        <div class="form-group">
+            <input id="code" autocomplete="off"  class="form-control" name="code" placeholder="Code" type="text" value="{{code}}">
+            <div id="validcode" style="display: none;" class="validcode">
+              Please provide a valid code.
+            </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table table-hover">
+              <thead>
+            <tr>
+              <th scope="col"> </th>
+              <th scope="col">1</th>
+              <th scope="col">2</th>
+              <th scope="col">3</th>
+              <th scope="col">4</th>
+              <th scope="col">5</th>
+            </tr>
+          </thead>
+          <tbody>
+              {% for row in rows %}
+            <tr>
+              <th scope="row">{{ row.question }}</th>
+              <td>
+                <div class="custom-control custom-radio">
+                  <input required type="radio" id="customRadio1{{ row.id }}" name = "{{ row.id }}" value = "1" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio1{{ row.id }}"> </label>
+                </div>
+              </td>
+              <td>
+                <div class="custom-control custom-radio">
+                  <input required type="radio" id="customRadio2{{ row.id }}" name = "{{ row.id }}" value = "2" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio2{{ row.id }}"> </label>
+                </div>
+              </td>
+              <td>
+                <div class="custom-control custom-radio">
+                  <input required type="radio" id="customRadio3{{ row.id }}"  name = "{{ row.id }}" value = "3" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio3{{ row.id }}"> </label>
+                </div>
+              </td>
+              <td>
+                <div class="custom-control custom-radio">
+                  <input required type="radio" id="customRadio4{{ row.id }}"  name = "{{ row.id }}" value = "4" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio4{{ row.id }}"> </label>
+                </div>
+              </td>
+              <td>
+                <div class="custom-control custom-radio">
+                  <input required type="radio" id="customRadio5{{ row.id }}"  name = "{{ row.id }}" value = "5" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio5{{ row.id }}"> </label>
+                </div>
+              </td>
+            </tr>
+            {% endfor %}
+          </table>
+        </div>
+        <div style="padding:20px; background-color:white;">
+                <button type="submit" name = "submit_button" class="btn btn-outline-dark btn-lg btn-block ">SUBMIT</button>
+            </div>
+</form>
+
+
+
+
+</main>
+{% endblock %}

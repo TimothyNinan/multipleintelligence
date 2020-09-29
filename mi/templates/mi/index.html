@@ -1,0 +1,69 @@
+{% extends "mi/layoutc.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+<main class="container-fluid">
+    <div class=" headers text-center header">
+        <div>
+            <p class="headd">MULTIPLE INTELLIGENCE</p>
+            <p class="headdd">CHANGING HOW WE LEARN</p>
+            <p class="headddd">SCROLL TO LEARN MORE</p>
+        </div>
+    </div>
+    <hr>
+    <div class="text-left" style="height: 500px; padding: 10px;">
+        <h2>THE THEORY OF MULTIPLE INTELLIGENCE</h2>
+        <p style="font-size: 20px;">In 1983, Howard Gardner proposed the idea of Multiple Intelligence, the idea that people process information in different ways.
+            While often confused with learning styles (how people learn best), Multiple Intelligence is best understood as the ability people have to process,
+            retain, and understand information in certain ways (what types of information are learned best). In essence, the Theory of Multiple Intelligence
+            helps dictate how information should be formatted to effectively learn.    
+        </p>
+        <hr>
+        <h2>GARDNER'S EIGHT INTELLIGENCES</h2>
+        <dl class="row" style="font-size: 20px;">
+            <dt class="col-sm-3">MUSICAL-RHYTHMIC AND HARMONIC</dt>
+            <dd class="col-sm-9">This area has to do with sensitivity to sounds, rhythms, tones, and music. People with a high musical intelligence normally have good pitch and may even have absolute pitch, and are able to sing, play musical instruments, and compose music. They have sensitivity to rhythm, pitch, meter, tone, melody or timbre.</dd>
+            <dt class="col-sm-3">VISUAL-SPATIAL</dt>
+            <dd class="col-sm-9">This area deals with spatial judgment and the ability to visualize with the mind's eye.</dd>
+            <dt class="col-sm-3">VERBAL-LINGUISTIC</dt>
+            <dd class="col-sm-9">People with high verbal-linguistic intelligence display a facility with words and languages. They are typically good at reading, writing, telling stories and memorizing words along with dates.</dd>
+            <dt class="col-sm-3">LOGICAL-MATHEMATICAL</dt>
+            <dd class="col-sm-9">This area has to do with logic, abstractions, reasoning, numbers and critical thinking. This also has to do with having the capacity to understand the underlying principles of some kind of causal system.</dd>
+            <dt class="col-sm-3">BODILY-KINESTHETIC</dt>
+            <dd class="col-sm-9">The core elements of the bodily-kinesthetic intelligence are control of one's bodily motions and the capacity to handle objects skillfully. This also includes a sense of timing, a clear sense of the goal of a physical action, along with the ability to train responses.</dd>
+            <dt class="col-sm-3">INTERPERSONAL</dt>
+            <dd class="col-sm-9">Individuals who have high interpersonal intelligence are characterized by their sensitivity to others' moods, feelings, temperaments, motivations, and their ability to cooperate in order to work as part of a group. Those with high interpersonal intelligence communicate effectively and empathize easily with others, and may be either leaders or followers. They often enjoy discussion and debate.</dd>
+            <dt class="col-sm-3">INTRAPERSONAL</dt>
+            <dd class="col-sm-9">This area has to do with introspective and self-reflective capacities. This refers to having a deep understanding of the self; what one's strengths or weaknesses are, what makes one unique, being able to predict one's own reactions or emotions.</dd>
+            <dt class="col-sm-3">NATURALISTIC</dt>
+            <dd class="col-sm-9">This area has to do with nurturing and relating information to one's natural surroundings. Examples include classifying natural forms such as animal and plant species and rocks and mountain types.</dd>
+        </dl>
+        <hr>
+        <h2>APPLICATIONS</h2>
+        <p style="font-size: 20px;">
+            For students and learners alike, multiple intelligences can be used to determine which types of information they should interact with for the best results.
+            For example, a logical-mathematical learner should choose to learn about volume and area by manipulating equations while a visual-spatial learner should
+            choose to use blocks and tiles to learn the same concepts. However, people shouldn't be lulled into the idea that they learn best in only one format. A
+            musician might find that they learn well by writing and reading information. To find out what your multiple intelligence is, click the "TEST" link in
+            the menu at the top.
+ 
+        </p>
+        <hr>
+        <h2>EDUCATION</h2>
+        <p style="font-size: 20px;">
+            This site was designed with teachers in mind. teachers, click the "get started" button or "register" link to sign up for an account. Create classes and invite your students to
+            take the multiple intelligence test using a unique class code. After they take the test, you'll be able to see the results and change how you teach accordingly.
+        </p>
+        <div style="height:110px;">
+        <p>Information from <a href="https://en.wikipedia.org/wiki/Theory_of_multiple_intelligences"> Wikipedia </a></p>
+        </div>
+    </div>
+
+    <div class="fixed-bottom" style="padding:20px; background-color:white;">
+        <a href="{%  url 'register' %}"><button type="button" class="btn btn-outline-dark btn-lg btn-block ">GET STARTED</button></a>
+    </div>
+</main>
+{% endblock %}

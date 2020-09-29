@@ -1,0 +1,17 @@
+{% extends "mi/layoutc.html" %}
+{% load mi_extras %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block main %}
+
+<main class="containter p-5">
+    <h2>RESULTS</h2>
+    {% for key in res %}
+        <p>Category: {{ key }}</p>
+        <p>Score: {{ res|get_item:key }}</p>
+    {% endfor %}
+</main>
+{% endblock %}

@@ -1,0 +1,28 @@
+.headers {
+    height: calc(100vh - 88px - 56px); 
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.headd {
+    color: black;
+    font-size: 7vw;
+    margin: 0px;
+}
+
+.headdd {
+    color: #6c757d;
+    font-size: 3vw;
+    margin: 0px;
+}
+
+.headddd {
+    color: #6c757d;
+    font-size: 1.5vw;
+    margin: 0px;
+}
+
+.validcode {
+    font-size: 1rem;
+    color: red;
+}
